@@ -6,16 +6,19 @@ const wordCounter = (value) => {
 
   if (value) {
     // COMPLETE THE LOGIC
-    wordCount.innerHTML = `Word Count: 0`;
+    let wordsCount = value.trim().split(/\s+/).length;
+    wordCount.innerHTML = `Word Count: ${wordsCount}`;
   } else {
     // if the value is empty, set the error message value to "Please input text"
-    error.innerHTML = ""; // UPDATE THIS
+    error.innerHTML = "Please input text"; // UPDATE THIS
   }
 };
 
 // OPTIONAL CHALLENGE
 const toggleMode = (btnText) => {
   // complete the function
+  var element = document.body;
+  element.classList.toggle("dark-mode");
 };
 
 // ************************************************ //
